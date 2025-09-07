@@ -52,6 +52,9 @@ com uma API REST em **Laravel 11**, autenticação JWT e integração com o fron
 
 ## Desenvolvimento Local
 
+#### Requisitos
+PHP 8.2+ e Composer 2.x
+
 ```bash
 git clone https://github.com/luanmykel/tiao-pardinho-collection-backend.git
 
@@ -77,6 +80,10 @@ php artisan test
 Ou simplesmente 😊
 
 ### Docker (Backend + Frontend)
+
+#### Requisitos
+Docker 24+ e Docker Compose v2+
+
 ```bash
 git clone https://github.com/luanmykel/tiao-pardinho-collection-backend.git
 
@@ -94,8 +101,8 @@ Senha:   secret123
 
 ## Live Demo
 
-**[Collection Tião Carreiro & Pardinho](https://LINK-AQUI.com)**
-**[Collection Tião Carreiro & Pardinho - Admin](https://LINK-AQUI.com/admin)**
+**[Collection Tião Carreiro & Pardinho](https://collection.lmdev.space/)**
+**[Collection Tião Carreiro & Pardinho - Admin](https://collection.lmdev.space/admin)**
 
 ### Credenciais de Acesso
 
