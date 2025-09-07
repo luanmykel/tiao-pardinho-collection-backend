@@ -1,0 +1,27 @@
+services:
+    collection-api:
+        build:
+            context: https://github.com/luanmykel/tiao-pardinho-collection-backend.git#main
+            dockerfile: Dockerfile
+        ports:
+            - "8000:80"
+        networks:
+            - collection
+
+    collection-web:
+        build:
+            context: https://github.com/luanmykel/tiao-pardinho-collection-frontend.git#main
+            dockerfile: Dockerfile
+            args:
+                VITE_API_URL: /api
+                VITE_AUTH_PERSIST: local
+        depends_on:
+            - collection-api
+        ports:
+            - "8080:80"
+        networks:
+            - collection
+
+networks:
+    collection: {}
+
