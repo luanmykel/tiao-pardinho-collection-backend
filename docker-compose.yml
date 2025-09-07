@@ -1,6 +1,7 @@
 services:
     collection-api:
         build:
+            # context: .
             context: https://github.com/luanmykel/tiao-pardinho-collection-backend.git#main
             dockerfile: Dockerfile
         ports:

@@ -45,7 +45,7 @@ Route::middleware('jwt.auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout']);
 
-    Route::get('/users/active', [AuthController::class, 'activeUsers']); // compat
+    Route::get('/users/active', [AuthController::class, 'activeUsers']);
 });
 
 Route::middleware(['jwt.auth', 'can:admin'])->group(function () {
@@ -61,5 +61,6 @@ Route::middleware(['jwt.auth', 'can:admin'])->group(function () {
         Route::put('/users/{id}/password', [UserAdminController::class, 'updatePassword']);
         Route::delete('/users/{id}', [UserAdminController::class, 'destroy']);
     });
-    Route::apiResource('/songs', SongAdminController::class)->only(['index', 'destroy']);
+    Route::apiResource('/songs', SongAdminController::class)->only(['index', 'destroy', 'update']);
+    Route::post('/songs/add', [SongAdminController::class, 'storeFromYoutube']);
 });
