@@ -87,6 +87,8 @@ Docker 24+ e Docker Compose v2+
 ```bash
 git clone https://github.com/luanmykel/tiao-pardinho-collection-backend.git
 
+cd tiao-pardinho-collection-backend
+
 docker compose up --build
 # ou em segundo plano
 docker compose up --build -d
